@@ -100,7 +100,6 @@ button {
   font-weight: 700;
   font-size: 26px;
   line-height: 1.2;
-  /*margin-left: 215px;*/
 }
 
 .accent {
@@ -153,10 +152,7 @@ button {
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  /*  Задаём значения перехода  */
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .site-nav .link.current {
@@ -179,7 +175,6 @@ button {
   margin-right: 0px;
 }
 
-/* При ховере меняем значения анимируемых свойств */
 .site-nav .link:hover,
 .site-nav .link:focus {
   color: var(--accent-color);
@@ -190,13 +185,11 @@ button {
 
 .auth-nav {
   display: flex;
-  /* padding-top: 32px;
-  padding-bottom: 32px; */
   margin-left: auto;
   align-items: center;
 }
 
-.auth-nav .item + .item {
+.auth-nav .item+.item {
   margin-left: 50px;
 }
 
@@ -210,10 +203,7 @@ button {
   align-items: center;
   padding-top: 40px;
   padding-bottom: 40px;
-  /*  Задаём значения перехода  */
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .auth-nav .tel {
@@ -226,10 +216,7 @@ button {
   align-items: center;
   padding-top: 40px;
   padding-bottom: 40px;
-  /*  Задаём значения перехода  */
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .mail-svg {
@@ -238,10 +225,7 @@ button {
   width: 18px;
   height: 20px;
   padding: 0;
-  /*  Задаём значения перехода  */
-  transition-property: fill;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .tel-svg {
@@ -250,10 +234,7 @@ button {
   height: 20px;
   padding: 0;
   fill: var(--secondary-text-color);
-  /*  Задаём значения перехода  */
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .mail:hover,
@@ -478,19 +459,14 @@ button {
   background-color: var(--primary-background-color);
   border-radius: 50%;
   /*  Задаём значения перехода  */
-  transition-property: background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .ellipse-svg {
   height: 20px;
   width: 20px;
   fill: #afb1b8;
-  /*  Задаём значения перехода  */
-  transition-property: fill;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .ellipse:hover,
@@ -530,10 +506,9 @@ button {
   text-align: center;
   min-width: 73px;
   padding: 6px 22px;
-  /*  Задаём значения перехода  */
-  transition-property: color, background-color, box-shadow;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button.secondary {
@@ -547,10 +522,9 @@ button {
   text-align: center;
   min-width: 103px;
   padding: 6px 22px;
-  /*  Задаём значения перехода  */
-  transition-property: color, background-color, box-shadow;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button:active {
@@ -607,6 +581,14 @@ button {
 
 .project .link {
   display: block;
+  transition-property: box-shadow;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project .link:hover,
+.project .link:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .groupe-thumb {
@@ -614,13 +596,6 @@ button {
   overflow: hidden;
 }
 
-.project .link:hover,
-.project .link:focus {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 250ms;
-}
 
 .text-overlay {
   position: absolute;
@@ -635,8 +610,7 @@ button {
   height: 101%;
   background: rgba(33, 150, 243, 0.9);
   transform: translateY(100%);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 .groupe-list:hover .text-overlay {
@@ -698,10 +672,7 @@ button {
   border-radius: 4px;
   align-items: center;
   justify-content: center;
-  /*  Задаём значения перехода  */
-  transition-property: border;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-card .logo:hover,
@@ -713,10 +684,7 @@ button {
   width: 106px;
   height: 60px;
   fill: #afb1b8;
-  /*  Задаём значения перехода  */
-  transition-property: fill;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-card .logo:hover svg,
@@ -782,20 +750,14 @@ contact {
   width: 44px;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
-  /*  Задаём значения перехода  */
-  transition-property: background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .ellips-svg {
   height: 20px;
   width: 20px;
   fill: var(--primary-background-color);
-  /*  Задаём значения перехода  */
-  transition-property: fill;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .ellips:hover,
@@ -817,10 +779,16 @@ contact {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
-  visibility: visible;
-  transition-property: fill;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(1.2);
 }
 
 .modal {
@@ -829,18 +797,29 @@ contact {
   height: 581px;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
   background-color: var(--text-color);
   border-radius: 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
-}
-
-.is-hidden {
-  visibility: 0;
-  opacity: 0;
-  pointer-events: none;
-}
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  animation: animate 1.5s infinite;
+    animation-iteration-count: 5;
+  }
+  
+  @keyframes animate {
+    0% {
+      box-shadow: 0 0 0 0 rgba(32, 128, 223, 0.4);
+    }
+  
+    70% {
+      box-shadow: 0 0 0 10px rgba(32, 128, 223, 0.4);
+    }
+  
+    100% {
+      box-shadow: 0 0 0 0 rgba(32, 128, 223, 0.4);
+    }
+  }
 
 .close-button {
   position: absolute;
